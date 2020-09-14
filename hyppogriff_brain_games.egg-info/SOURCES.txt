@@ -7,4 +7,5 @@ hyppogriff_brain_games.egg-info/PKG-INFO
 hyppogriff_brain_games.egg-info/SOURCES.txt
 hyppogriff_brain_games.egg-info/dependency_links.txt
 hyppogriff_brain_games.egg-info/entry_points.txt
+hyppogriff_brain_games.egg-info/requires.txt
 hyppogriff_brain_games.egg-info/top_level.txt
