@@ -6,7 +6,7 @@ def even(name):
     i = 0
     while i < 3:
         number = random.randint(0, 100)
-        print('Question: ', number)
+        print('Question:', number)
         answer = prompt.string('Your answer: ')
         if number % 2 == 0:
             if answer == 'yes':
@@ -17,7 +17,7 @@ def even(name):
                     break
             else:
                 print('\'', answer, '\'', ' is wrong answer ;(. Correct\
-                        answer was \'yes\'.', sep='')
+ answer was \'yes\'.', sep='')
                 print('Let\'s try again,', name)
                 break
         elif number % 2 != 0:
@@ -29,6 +29,6 @@ def even(name):
                     break
             else:
                 print('\'', answer, '\'', ' is wrong answer ;(. Correct\
-                        answer was \'no\'.', sep='')
+ answer was \'no\'.', sep='')
                 print('Let\'s try again,', name)
                 break
