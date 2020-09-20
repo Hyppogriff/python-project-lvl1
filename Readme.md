@@ -9,3 +9,5 @@
 <a href="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA" target="_blank"><img src="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA.svg" /></a>
 * brain-calc demo
 <a href="https://asciinema.org/a/360782" target="_blank"><img src="https://asciinema.org/a/360782.svg" /></a>
+* brain-gcd demo
+<a href="https://asciinema.org/a/360797" target="_blank"><img src="https://asciinema.org/a/360797.svg" /></a>
