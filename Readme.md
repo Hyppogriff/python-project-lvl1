@@ -11,3 +11,5 @@
 <a href="https://asciinema.org/a/360782" target="_blank"><img src="https://asciinema.org/a/360782.svg" /></a>
 * brain-gcd demo
 <a href="https://asciinema.org/a/360797" target="_blank"><img src="https://asciinema.org/a/360797.svg" /></a>
+* brain-progression demo
+<a href="https://asciinema.org/a/360992" target="_blank"><img src="https://asciinema.org/a/360992.svg" /></a>
