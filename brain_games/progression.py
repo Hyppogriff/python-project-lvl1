@@ -14,13 +14,14 @@ def progression(name):
             number_last = number_last + number_step
             number += 1
         index = random.randint(0, 9)
-        for value in range(number_first, number_last + number_step, number_step):
+        for value in range(number_first, number_last + number_step,
+                           number_step):
             sequence.append(value)
         result = sequence.pop(index)
         sequence.insert(index, '..')
-        print('Question:', end = ' ')
+        print('Question:', end=' ')
         for value in sequence:
-            print(value, end = ' ')
+            print(value, end=' ')
         print('')
         answer = prompt.integer('Your answer: ')
         if result == answer:
