@@ -6,11 +6,7 @@
 
 # Brain Games
 
-Download brain-games package:
-https://test.pypi.org/project/hyppogriff-brain-games/  
-also u need poetry:
-https://pypi.org/simple prompt  
-or u can use this instructions:
+Use this instructions to install games:
 pip install -i https://test.pypi.org/simple/ hyppogriff-brain-games --extra-index-url https://pypi.org/simple prompt  
 
 * brain-even demo  
