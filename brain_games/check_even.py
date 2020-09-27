@@ -4,8 +4,8 @@ import brain_games.cli
 
 
 def even(name):
-    i = 0
-    while i < 3:
+    counter = brain_games.cli.counter()
+    while counter > 0:
         number = random.randint(0, 100)
         print('Question:', number)
         answer = prompt.string('Your answer: ')
@@ -14,7 +14,7 @@ def even(name):
         else:
             result = 'no'
         if brain_games.cli.isResult(result, answer, name):
-            i += 1
+            counter -= 1
         else:
             break
-    brain_games.cli.check_counter(i, name)
+    brain_games.cli.check_counter(counter, name)

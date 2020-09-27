@@ -27,12 +27,16 @@ def isResult(result, answer, name):
         print('Correct!')
         return True
     else:
-        print('\'', answer, '\'', ' is wrong answer ;(. Correct answer was ',\
- '\'', result, '\'', sep='')
+        print('\'', answer, '\'', ' is wrong answer ;(. Correct answer \
+ was ', '\'', result, '\'', sep='')
         print('Let\'s try again,', name)
         return False
 
 
-def check_counter(i, name):
-    if i == 3:
+def check_counter(counter, name):
+    if counter == 0:
         print('Congratulations,', name)
+
+
+def counter():
+    return 3

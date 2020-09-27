@@ -4,10 +4,10 @@ import brain_games.cli
 
 
 def gcd(name):
-    i = 0
-    while i < 3:
-        number1 = random.randint(1, 100)
-        number2 = random.randint(1, 100)
+    counter = brain_games.cli.counter()
+    while counter > 0:
+        number1 = random.randint(1, 50)
+        number2 = random.randint(1, 50)
         print('Question:', number1, number2)
         answer = prompt.integer('Your answer: ')
         number_divisor = min(number1, number2)
@@ -18,7 +18,7 @@ def gcd(name):
                 break
             number_divisor -= 1
         if brain_games.cli.isResult(result, answer, name):
-            i += 1
+            counter -= 1
         else:
             break
-    brain_games.cli.check_counter(i, name)
+    brain_games.cli.check_counter(counter, name)
