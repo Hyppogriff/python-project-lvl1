@@ -10,13 +10,11 @@ def even(name):
         print('Question:', number)
         answer = prompt.string('Your answer: ')
         if number % 2 == 0:
-            if brain_games.cli.isResult('yes', answer, name):
-                i += 1
-            else:
-                break
-        elif number % 2 != 0:
-            if brain_games.cli.isResult('no', answer, name):
-                i += 1
-            else:
-                break
+            result = 'yes'
+        else:
+            result = 'no'
+        if brain_games.cli.isResult(result, answer, name):
+            i += 1
+        else:
+            break
     brain_games.cli.check_counter(i, name)

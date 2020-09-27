@@ -6,7 +6,7 @@ import brain_games.cli
 def prime(name):
     i = 0
     while i < 3:
-        number = random.randint(1, 100)
+        number = random.randint(1, 50)
         result = 'yes'
         for value in range(number - 1, 1, -1):
             if not number % value:

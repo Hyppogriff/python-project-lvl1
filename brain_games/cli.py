@@ -27,7 +27,8 @@ def isResult(result, answer, name):
         print('Correct!')
         return True
     else:
-        print(answer, 'is wrong answer ;(. Correct answer was', result)
+        print('\'', answer, '\'', ' is wrong answer ;(. Correct answer was ',\
+ '\'', result, '\'', sep='')
         print('Let\'s try again,', name)
         return False
 
