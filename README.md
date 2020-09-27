@@ -4,7 +4,15 @@
 ![Python CI](https://github.com/Hyppogriff/python-project-lvl1/actions)
 ![Python CI](https://github.com/Hyppogriff/python-project-lvl1/workflows/Python%20CI/badge.svg)  
 
-# Brain Games  
+# Brain Games
+
+Download brain-games package:
+https://test.pypi.org/project/hyppogriff-brain-games/
+also u need poetry:
+https://pypi.org/simple prompt
+or u can use this instructions:
+pip install -i https://test.pypi.org/simple/ hyppogriff-brain-games --extra-index-url https://pypi.org/simple prompt 
+
 * brain-even demo  
 <a href="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA" target="_blank"><img src="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA.svg" /></a>
 * brain-calc demo
