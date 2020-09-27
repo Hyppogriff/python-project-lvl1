@@ -3,7 +3,7 @@
 <a href="https://travis-ci.org/Hyppogriff/python-project-lvl1"><img src="https://travis-ci.org/Hyppogriff/python-project-lvl1.svg?branch=master"></a>
 # Brain Games
 Use this instructions to install games:  
-pip install -i https://test.pypi.org/simple/ hyppogriff-brain-games --extra-index-url https://pypi.org/simple prompt
+"pip install -i https://test.pypi.org/simple/ hyppogriff-brain-games --extra-index-url https://pypi.org/simple prompt"
 * brain-even demo  
 <a href="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA" target="_blank"><img src="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA.svg" /></a>
 * brain-calc demo
