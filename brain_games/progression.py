@@ -1,22 +1,13 @@
 import prompt
 import random
+import brain_games.cli
 
 
 def progression(name):
     i = 0
     while i < 3:
-        number_first = random.randint(1, 10)
-        number_step = random.randint(1, 10)
-        number_last = number_first
-        number = 1
-        sequence = []
-        while number < 10:
-            number_last = number_last + number_step
-            number += 1
+        sequence = brain_games.cli.generate_progression()
         index = random.randint(0, 9)
-        for value in range(number_first, number_last + number_step,
-                           number_step):
-            sequence.append(value)
         result = sequence.pop(index)
         sequence.insert(index, '..')
         print('Question:', end=' ')
@@ -24,12 +15,8 @@ def progression(name):
             print(value, end=' ')
         print('')
         answer = prompt.integer('Your answer: ')
-        if result == answer:
-            print('Correct!')
+        if brain_games.cli.isResult(result, answer, name):
             i += 1
         else:
-            print(answer, 'is wrong answer ;(. Correct answer was', result)
-            print('Let\'s try again,', name)
             break
-    if i == 3:
-        print('Congratulations,', name)
+    brain_games.cli.check_counter(i, name)

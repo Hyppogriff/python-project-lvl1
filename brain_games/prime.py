@@ -1,5 +1,6 @@
 import prompt
 import random
+import brain_games.cli
 
 
 def prime(name):
@@ -12,13 +13,8 @@ def prime(name):
                 result = 'no'
         print('Question:', number)
         answer = prompt.string('Your answer: ')
-        if result == answer:
-            print('Correct!')
+        if brain_games.cli.isResult(result, answer, name):
             i += 1
         else:
-            print('\'', answer, '\' ', 'is wrong answer ;(. Correct\
- answer was ', '\'', result, '\'', sep='')
-            print('Let\'s try again,', name)
             break
-    if i == 3:
-        print('Congratulations,', name)
+    brain_games.cli.check_counter(i, name)

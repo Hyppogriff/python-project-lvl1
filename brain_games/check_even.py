@@ -1,5 +1,6 @@
 import prompt
 import random
+import brain_games.cli
 
 
 def even(name):
@@ -9,26 +10,13 @@ def even(name):
         print('Question:', number)
         answer = prompt.string('Your answer: ')
         if number % 2 == 0:
-            if answer == 'yes':
-                print('Correct!')
+            if brain_games.cli.isResult('yes', answer, name):
                 i += 1
-                if i == 3:
-                    print('Congratulations,', name)
-                    break
             else:
-                print('\'', answer, '\'', ' is wrong answer ;(. Correct\
- answer was \'yes\'.', sep='')
-                print('Let\'s try again,', name)
                 break
         elif number % 2 != 0:
-            if answer == 'no':
-                print('Correct!')
+            if brain_games.cli.isResult('no', answer, name):
                 i += 1
-                if i == 3:
-                    print('Congratulations,', name)
-                    break
             else:
-                print('\'', answer, '\'', ' is wrong answer ;(. Correct\
- answer was \'no\'.', sep='')
-                print('Let\'s try again,', name)
                 break
+    brain_games.cli.check_counter(i, name)

@@ -1,5 +1,6 @@
 import prompt
 import random
+import brain_games.cli
 
 
 def calc(name):
@@ -13,30 +14,20 @@ def calc(name):
         answer = prompt.integer('Your answer: ')
         if operation == '+':
             result = number1 + number2
-            if result == answer:
-                print('Correct!')
+            if brain_games.cli.isResult(result, answer, name):
                 i += 1
             else:
-                print(answer, 'is wrong answer ;(. Correct answer was', result)
-                print('Let\'s try again,', name)
                 break
         elif operation == '-':
             result = number1 - number2
-            if result == answer:
-                print('Correct!')
+            if brain_games.cli.isResult(result, answer, name):
                 i += 1
             else:
-                print(answer, 'is wrong answer ;(. Correct answer was', result)
-                print('Let\'s try again,', name)
                 break
         elif operation == '*':
             result = number1 * number2
-            if result == answer:
-                print('Correct!')
+            if brain_games.cli.isResult(result, answer, name):
                 i += 1
             else:
-                print(answer, 'is wrong answer ;(. Correct answer was', result)
-                print('Let\'s try again,', name)
                 break
-    if i == 3:
-        print('Congratulations,', name)
+    brain_games.cli.check_counter(i, name)

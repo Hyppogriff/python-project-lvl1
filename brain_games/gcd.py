@@ -1,5 +1,6 @@
 import prompt
 import random
+import brain_games.cli
 
 
 def gcd(name):
@@ -9,19 +10,15 @@ def gcd(name):
         number2 = random.randint(1, 100)
         print('Question:', number1, number2)
         answer = prompt.integer('Your answer: ')
-        number = min(number1, number2)
-        while number > 0:
-            if (max(number1, number2) % number == 0 and
-                    min(number1, number2) % number == 0):
-                result = number
-                if result == answer:
-                    print('Correct!')
-                    i += 1
-                    break
-            number -= 1
-        if result != answer:
-            print(answer, 'is wrong answer ;( Correct answer was', result)
-            print('Let\'s try again,', name)
+        number_divisor = min(number1, number2)
+        while number_divisor > 0:
+            if (max(number1, number2) % number_divisor == 0 and
+                    min(number1, number2) % number_divisor == 0):
+                result = number_divisor
+                break
+            number_divisor -= 1
+        if brain_games.cli.isResult(result, answer, name):
+            i += 1
+        else:
             break
-    if i == 3:
-        print('Congratulations,', name)
+    brain_games.cli.check_counter(i, name)
