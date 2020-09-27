@@ -4,7 +4,7 @@
 # Brain Games
 Use this instructions to install games:  
 pip install -i https://test.pypi.org/simple/ hyppogriff-brain-games  
-If u have not poetry package, use extra url:  
+If u have not prompt package, use extra url:  
 pip install -i https://test.pypi.org/simple/ hyppogriff-brain-games --extra-index-url https://pypi.org/simple prompt
 * brain-even demo  
 <a href="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA" target="_blank"><img src="https://asciinema.org/a/sjHo1xIpWSYm6jpe2yIjVg6gA.svg" /></a>
