@@ -7,10 +7,7 @@ def prime(name):
     counter = brain_games.cli.counter()
     while counter > 0:
         number = random.randint(1, 50)
-        result = 'yes'
-        for value in range(number - 1, 1, -1):
-            if not number % value:
-                result = 'no'
+        result = check_number(number)
         print('Question:', number)
         answer = prompt.string('Your answer: ')
         if brain_games.cli.isResult(result, answer, name):
@@ -18,3 +15,11 @@ def prime(name):
         else:
             break
     brain_games.cli.check_counter(counter, name)
+
+
+def check_number(number):
+    result = 'yes'
+    for value in range(number - 1, 1, -1):
+        if not number % value:
+            result = 'no'
+    return result
