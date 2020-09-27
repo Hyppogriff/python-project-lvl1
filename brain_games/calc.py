@@ -12,22 +12,19 @@ def calc(name):
         operation = random.choice(sequence)
         print('Question:', number1, operation, number2)
         answer = prompt.integer('Your answer: ')
-        if operation == '+':
-            result = number1 + number2
-            if brain_games.cli.isResult(result, answer, name):
-                i += 1
-            else:
-                break
-        elif operation == '-':
-            result = number1 - number2
-            if brain_games.cli.isResult(result, answer, name):
-                i += 1
-            else:
-                break
-        elif operation == '*':
-            result = number1 * number2
-            if brain_games.cli.isResult(result, answer, name):
-                i += 1
-            else:
-                break
+        result = check_operation(operation, number1, number2)
+        if brain_games.cli.isResult(result, answer, name):
+            i += 1
+        else:
+            break
     brain_games.cli.check_counter(i, name)
+
+
+def check_operation(operation, number1, number2):
+    if operation == '+':
+        result = number1 + number2
+    elif operation == '-':
+        result = number1 - number2
+    elif operation == '*':
+        result = number1 * number2
+    return result

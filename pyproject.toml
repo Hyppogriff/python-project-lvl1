@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Hyppogriff_brain_games"
-version = "0.8.0"
+version = "0.8.1"
 description = "short logic games"
 authors = ["Viacheslav <hyppogriff@gmail.com>"]
 packages = [
