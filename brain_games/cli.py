@@ -16,12 +16,3 @@ def isResult(result, answer, name):
  was ', '\'', result, '\'', sep='')
         print('Let\'s try again,', name)
         return False
-
-
-def check_counter(counter, name):
-    if counter == 0:
-        print('Congratulations,', name)
-
-
-def counter():
-    return 3
