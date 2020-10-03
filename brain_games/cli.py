@@ -7,12 +7,12 @@ def welcome_user():
     return name
 
 
-def isResult(result, answer, name):
+def is_correct_answer(result, answer):
     if result == answer:
-        print('Correct!')
         return True
     else:
-        print('\'', answer, '\'', ' is wrong answer ;(. Correct answer \
- was ', '\'', result, '\'', sep='')
-        print('Let\'s try again,', name)
         return False
+
+
+def greeting():
+    print('Welcome to the Brain Games!')

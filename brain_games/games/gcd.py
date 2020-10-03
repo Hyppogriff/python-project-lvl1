@@ -2,7 +2,12 @@ import prompt
 import random
 
 
-def question():
+def show_description():
+    task = 'Find the greatest common divisor of given numbers.'
+    return task
+
+
+def ask_question():
     number1 = random.randint(1, 50)
     number2 = random.randint(1, 50)
     print('Question:', number1, number2)

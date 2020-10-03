@@ -2,17 +2,24 @@ import prompt
 import random
 
 
-def question():
+def show_description():
+    task = 'Answer "yes" if number even otherwise answer "no".'
+    return task
+
+
+def ask_question():
     number = random.randint(0, 100)
     print('Question:', number)
     answer = prompt.string('Your answer: ')
-    result = find_result(number)
-    return result, answer
-
-
-def find_result(number):
-    if number % 2 == 0:
+    if is_even(number):
         result = 'yes'
     else:
         result = 'no'
-    return result
+    return result, answer
+
+
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    else:
+        return False

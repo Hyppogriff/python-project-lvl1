@@ -2,7 +2,12 @@ import prompt
 import random
 
 
-def question():
+def show_description():
+    task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    return task
+
+
+def ask_question():
     number = random.randint(1, 50)
     result = check_number(number)
     print('Question:', number)
