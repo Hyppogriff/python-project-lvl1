@@ -25,4 +25,6 @@ def check_operation(operation, number1, number2):
         result = number1 - number2
     elif operation == '*':
         result = number1 * number2
+    else:
+        print('Unknown operation:', operation)
     return result
