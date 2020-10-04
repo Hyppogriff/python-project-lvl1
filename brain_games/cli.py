@@ -16,3 +16,8 @@ def is_correct_answer(result, answer):
 
 def greeting():
     print('Welcome to the Brain Games!')
+
+
+def check_win_counter(counter, win_counter, name):
+    if counter == win_counter:
+        print('Congratulations,', name)

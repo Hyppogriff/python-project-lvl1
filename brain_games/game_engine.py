@@ -15,5 +15,4 @@ def run_game(game):
  was ', '\'', result, '\'', sep='')
             print('Let\'s try again,', name)
             break
-        if counter == win_counter:
-            print('Congratulations,', name)
+    brain_games.cli.check_win_counter(counter, win_counter, name)
