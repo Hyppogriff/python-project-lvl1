@@ -1,4 +1,5 @@
 import brain_games.cli
+import prompt
 
 
 def run_game(game):
@@ -9,7 +10,7 @@ def run_game(game):
     for counter in range(1, win_counter + 1):
         result, question = game.ask_question()
         print(question)
-        answer = brain_games.cli.get_answer(game)
+        answer = prompt.string('Your answer: ')
         if brain_games.cli.is_correct_answer(result, answer):
             brain_games.cli.print_correct_message()
         else:
