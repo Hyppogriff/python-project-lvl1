@@ -7,12 +7,12 @@ def run_game(game):
     name = brain_games.cli.welcome_user()
     win_counter = 3
     for counter in range(1, win_counter + 1):
-        result, answer = game.ask_question()
+        result, question = game.ask_question()
+        print(question)
+        answer = brain_games.cli.get_answer(game)
         if brain_games.cli.is_correct_answer(result, answer):
-            print('Correct!')
+            brain_games.cli.print_correct_message()
         else:
-            print('\'', answer, '\'', ' is wrong answer ;(. Correct answer \
- was ', '\'', result, '\'', sep='')
-            print('Let\'s try again,', name)
+            brain_games.cli.print_wrong_message(result, answer, name)
             break
-    brain_games.cli.check_win_counter(counter, win_counter, name)
+        brain_games.cli.check_win_counter(counter, win_counter, name)

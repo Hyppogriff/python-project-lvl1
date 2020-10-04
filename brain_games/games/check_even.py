@@ -1,4 +1,3 @@
-import prompt
 import random
 
 
@@ -9,13 +8,12 @@ def show_description():
 
 def ask_question():
     number = random.randint(0, 100)
-    print('Question:', number)
-    answer = prompt.string('Your answer: ')
+    question = "Question: {}".format(number)
     if is_even(number):
         result = 'yes'
     else:
         result = 'no'
-    return result, answer
+    return result, question
 
 
 def is_even(number):

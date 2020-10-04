@@ -1,4 +1,3 @@
-import prompt
 import random
 
 
@@ -8,19 +7,18 @@ def show_description():
 
 
 def ask_question():
-    number1 = random.randint(1, 50)
-    number2 = random.randint(1, 50)
-    print('Question:', number1, number2)
-    answer = prompt.integer('Your answer: ')
-    result = find_divisor(number1, number2)
-    return result, answer
+    number_1 = random.randint(1, 50)
+    number_2 = random.randint(1, 50)
+    question = "Question: {} {}".format(number_1, number_2)
+    result = find_divisor(number_1, number_2)
+    return result, question
 
 
-def find_divisor(number1, number2):
-    number_divisor = min(number1, number2)
+def find_divisor(number_1, number_2):
+    number_divisor = min(number_1, number_2)
     while number_divisor > 0:
-        if (max(number1, number2) % number_divisor == 0 and
-                min(number1, number2) % number_divisor == 0):
+        if (max(number_1, number_2) % number_divisor == 0 and
+                min(number_1, number_2) % number_divisor == 0):
             result = number_divisor
             break
         number_divisor -= 1

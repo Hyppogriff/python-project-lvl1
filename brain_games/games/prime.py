@@ -1,4 +1,3 @@
-import prompt
 import random
 
 
@@ -12,9 +11,8 @@ def ask_question():
     result = 'no'
     if is_prime(number):
         result = 'yes'
-    print('Question:', number)
-    answer = prompt.string('Your answer: ')
-    return result, answer
+    question = "Question: {}".format(number)
+    return result, question
 
 
 def is_prime(number):

@@ -1,4 +1,3 @@
-import prompt
 import random
 
 
@@ -12,9 +11,9 @@ def ask_question():
     index = random.randint(0, 9)
     result = progression.pop(index)
     progression.insert(index, '..')
-    print_question(progression)
-    answer = prompt.integer('Your answer: ')
-    return result, answer
+    string = get_string_from_progression(progression)
+    question = "Question: {}".format(string)
+    return result, question
 
 
 def generate_progression():
@@ -27,8 +26,9 @@ def generate_progression():
     return progression
 
 
-def print_question(progression):
-    print('Question:', end=' ')
+def get_string_from_progression(progression):
+    string = ''
     for value in progression:
-        print(value, end=' ')
-    print('')
+        string = string + str(value) + " "
+    string = string.rstrip()
+    return string
