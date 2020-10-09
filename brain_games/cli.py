@@ -1,31 +1,14 @@
 import prompt
 
 
-def welcome_user():
-    name = prompt.string('May I have your name? ') + '!'
-    print('Hello,', name, '\n')
+def get_user_name():
+    name = prompt.string('May I have your name? ')
+    name = "{}!".format(name)
     return name
 
 
 def is_correct_answer(result, answer):
-    if str(result) == answer:
-        return True
-    else:
-        return False
-
-
-def greeting():
-    text = 'Welcome to the Brain Games!'
-    print(text)
-
-
-def check_win_counter(counter, win_counter, name):
-    if counter == win_counter:
-        print('Congratulations,', name)
-
-
-def print_correct_message():
-    print('Correct!')
+    return result == answer
 
 
 def print_wrong_message(res, ans, name):

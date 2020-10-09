@@ -1,22 +1,24 @@
 import random
 
 
-def show_description():
-    task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    return task
+TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MIN_NUMBER = 2
+MAX_NUMBER = 50
 
 
 def ask_question():
-    number = random.randint(1, 50)
+    number = random.randint(MIN_NUMBER, MAX_NUMBER)
     result = 'no'
     if is_prime(number):
         result = 'yes'
-    question = "Question: {}".format(number)
+    question = "{}".format(number)
     return result, question
 
 
 def is_prime(number):
-    for value in range(number - 1, 1, -1):
+    if number <= 1:
+        raise ValueError("Wrong number")
+    for value in range(number - 1, MIN_NUMBER, -1):
         if not number % value:
             return False
     return True

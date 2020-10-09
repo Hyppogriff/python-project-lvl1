@@ -1,18 +1,18 @@
 import random
 
 
-def show_description():
-    task = 'What is the result of the expression?'
-    return task
+TASK = 'What is the result of the expression?'
+MIN_NUMBER = 0
+MAX_NUMBER = 10
 
 
 def ask_question():
-    number_1 = random.randint(0, 10)
-    number_2 = random.randint(0, 10)
+    number_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    number_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
     operations = ['+', '-', '*']
     operation = random.choice(operations)
-    question = "Question: {} {} {}".format(number_1, operation, number_2)
-    result = check_operation(operation, number_1, number_2)
+    question = "{} {} {}".format(number_1, operation, number_2)
+    result = str(check_operation(operation, number_1, number_2))
     return result, question
 
 
@@ -24,5 +24,5 @@ def check_operation(operation, number_1, number_2):
     elif operation == '*':
         result = number_1 * number_2
     else:
-        print('Unknown operation:', operation)
+        raise ValueError("Unknown operation")
     return result

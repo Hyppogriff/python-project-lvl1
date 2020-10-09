@@ -1,16 +1,16 @@
 import random
 
 
-def show_description():
-    task = 'Find the greatest common divisor of given numbers.'
-    return task
+TASK = 'Find the greatest common divisor of given numbers.'
+MIN_NUMBER = 1
+MAX_NUMBER = 50
 
 
 def ask_question():
-    number_1 = random.randint(1, 50)
-    number_2 = random.randint(1, 50)
-    question = "Question: {} {}".format(number_1, number_2)
-    result = find_divisor(number_1, number_2)
+    number_1 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    number_2 = random.randint(MIN_NUMBER, MAX_NUMBER)
+    question = "{} {}".format(number_1, number_2)
+    result = str(find_divisor(number_1, number_2))
     return result, question
 
 
