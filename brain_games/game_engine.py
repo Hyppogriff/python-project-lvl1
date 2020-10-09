@@ -4,10 +4,11 @@ import prompt
 
 MIN_ROUND_NUMBER = 1
 WIN_COUNTER = 3
+GREETING = 'Welcome to the Brain Games!'
 
 
 def run_game(game):
-    print('Welcome to the Brain Games!')
+    print(GREETING)
     print(game.TASK, '\n')
     name = brain_games.cli.get_user_name()
     print('Hello,', name, '\n')
