@@ -16,9 +16,7 @@ def generate_question_and_answer():
 
 
 def is_prime(number):
-    if number <= 1:
-        raise ValueError("Wrong number")
     for value in range(number - 1, MIN_RANDOM_NUMBER, -1):
-        if not number % value:
+        if not number % value or number <= 1:
             return False
     return True
