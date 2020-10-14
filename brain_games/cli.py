@@ -14,4 +14,4 @@ def is_correct_answer(result, answer):
 def print_wrong_message(res, ans, name):
     text = "'{}' is wrong answer ;(. Correct answer was '{}'".format(ans, res)
     print(text)
-    print('Let\'s try again,', name)
+    print('Let\'s try again, {}'.format(name))

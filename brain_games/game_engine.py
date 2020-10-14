@@ -11,10 +11,10 @@ def run_game(game):
     print(GREETING)
     print(game.TASK, '\n')
     name = brain_games.cli.get_user_name()
-    print('Hello,', name, '\n')
+    print('Hello, {}'.format(name), '\n')
     for counter in range(MIN_ROUND_NUMBER, WIN_COUNTER + 1):
         result, question = game.ask_question()
-        print("Question:", question)
+        print("Question: {}".format(question))
         answer = prompt.string('Your answer: ')
         if brain_games.cli.is_correct_answer(result, answer):
             print('Correct!')
@@ -22,4 +22,4 @@ def run_game(game):
             brain_games.cli.print_wrong_message(result, answer, name)
             break
         if counter == WIN_COUNTER:
-            print('Congratulations,', name)
+            print('Congratulations, {}'.format(name))
