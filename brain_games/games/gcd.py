@@ -15,11 +15,9 @@ def generate_question_and_answer():
 
 
 def find_divisor(number_1, number_2):
-    number_divisor = min(number_1, number_2)
-    while number_divisor > 0:
-        if (max(number_1, number_2) % number_divisor == 0 and
-                min(number_1, number_2) % number_divisor == 0):
-            correct_answer = number_divisor
-            break
-        number_divisor -= 1
-    return correct_answer
+    while number_1 != number_2:
+        if number_1 > number_2:
+            number_1 = number_1 - number_2
+        else:
+            number_2 = number_2 - number_1
+    return number_1
