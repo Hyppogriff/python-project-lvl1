@@ -2,19 +2,15 @@ import random
 
 
 TASK = 'Answer "yes" if number even otherwise answer "no".'
-MIN_NUMBER = 0
-MAX_NUMBER = 100
+MIN_RANDOM_NUMBER = 0
+MAX_RANDOM_NUMBER = 100
 
 
-def ask_question():
-    number = random.randint(MIN_NUMBER, MAX_NUMBER)
-    question = "{}".format(number)
-    if is_even(number):
-        result = 'yes'
+def generate_question_and_answer():
+    number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    question = str(number)
+    if number % 2 == 0:
+        correct_answer = 'yes'
     else:
-        result = 'no'
-    return result, question
-
-
-def is_even(number):
-    return number % 2 == 0
+        correct_answer = 'no'
+    return correct_answer, question

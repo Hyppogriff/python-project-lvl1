@@ -10,14 +10,14 @@ MIN_STEP_NUMBER = 1
 MAX_STEP_NUMBER = 10
 
 
-def ask_question():
+def generate_question_and_answer():
     progression = generate_progression()
     index = random.randint(MIN_INDEX_NUMBER, MAX_INDEX_NUMBER)
-    result = str(progression.pop(index))
+    correct_answer = str(progression.pop(index))
     progression.insert(index, '..')
     string = get_string_from_progression(progression)
     question = "{}".format(string)
-    return result, question
+    return correct_answer, question
 
 
 def generate_progression():

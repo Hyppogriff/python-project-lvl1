@@ -13,7 +13,7 @@ def run_game(game):
     name = brain_games.cli.get_user_name()
     print('Hello, {}'.format(name), '\n')
     for counter in range(MIN_ROUND_NUMBER, NUMBER_ROUNDS + 1):
-        correct_answer, question = game.ask_question()
+        correct_answer, question = game.generate_question_and_answer()
         print("Question: {}".format(question))
         user_answer = prompt.string('Your answer: ')
         if correct_answer == user_answer:
