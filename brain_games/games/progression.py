@@ -17,13 +17,12 @@ def generate_question_and_answer():
     hidden_index = random.randint(MIN_INDEX_NUMBER, len(progression) - 1)
     correct_answer = str(progression[hidden_index])
     progression[hidden_index] = '..'
-    progression = ' '.join(str(value) for value in progression)
-    question = "{}".format(progression)
+    question = ' '.join(str(value) for value in progression)
     return correct_answer, question
 
 
 def generate_progression(number_first, number_step):
-    number_last = number_first + (LENGTH_PROGRESSION - 1) * number_step
-    progression = list(range(number_first, number_last + number_step,
+    number_last = number_first + LENGTH_PROGRESSION * number_step
+    progression = list(range(number_first, number_last,
                        number_step))
     return progression

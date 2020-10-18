@@ -1,8 +1,6 @@
-import brain_games.cli
 import prompt
 
 
-MIN_ROUND_NUMBER = 1
 NUMBER_ROUNDS = 3
 GREETING = 'Welcome to the Brain Games!'
 
@@ -10,9 +8,9 @@ GREETING = 'Welcome to the Brain Games!'
 def run_game(game):
     print(GREETING)
     print(game.TASK, '\n')
-    name = brain_games.cli.get_user_name()
-    print('Hello, {}'.format(name), '\n')
-    for counter in range(MIN_ROUND_NUMBER, NUMBER_ROUNDS + 1):
+    name = "{}!".format(prompt.string('May I have your name? '))
+    print('Hello, {}\n'.format(name))
+    for counter in range(NUMBER_ROUNDS):
         correct_answer, question = game.generate_question_and_answer()
         print("Question: {}".format(question))
         user_answer = prompt.string('Your answer: ')
@@ -21,8 +19,8 @@ def run_game(game):
         else:
             print_wrong_message(correct_answer, user_answer, name)
             break
-        if counter == NUMBER_ROUNDS:
-            print('Congratulations, {}'.format(name))
+    else:
+        print('Congratulations, {}'.format(name))
 
 
 def print_wrong_message(res, ans, name):
