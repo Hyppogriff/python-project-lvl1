@@ -18,7 +18,7 @@ def generate_question_and_answer():
 def is_prime(number):
     if number <= 1:
         return False
-    for value in range(2, number):
+    for value in range(2, number - 1):
         if number % value == 0:
             return False
     return True

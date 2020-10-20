@@ -8,8 +8,8 @@ GREETING = 'Welcome to the Brain Games!'
 def run_game(game):
     print(GREETING)
     print(game.TASK, '\n')
-    name = "{}!".format(prompt.string('May I have your name? '))
-    print('Hello, {}\n'.format(name))
+    name = prompt.string('May I have your name? ')
+    print('Hello, {}!\n'.format(name))
     for _ in range(NUMBER_OF_ROUNDS):
         question, correct_answer = game.generate_question_and_answer()
         print("Question: {}".format(question))
@@ -17,13 +17,9 @@ def run_game(game):
         if correct_answer == user_answer:
             print('Correct!')
         else:
-            print_wrong_message(correct_answer, user_answer, name)
+            print("'{}' is wrong answer ;(. \
+ Correct answer was '{}'".format(user_answer, correct_answer))
+            print('Let\'s try again, {}'.format(name))
             break
     else:
         print('Congratulations, {}'.format(name))
-
-
-def print_wrong_message(res, ans, name):
-    text = "'{}' is wrong answer ;(. Correct answer was '{}'".format(ans, res)
-    print(text)
-    print('Let\'s try again, {}'.format(name))
