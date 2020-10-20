@@ -11,18 +11,18 @@ MAX_STEP_NUMBER = 10
 
 
 def generate_question_and_answer():
-    number_first = random.randint(MIN_FIRST_NUMBER, MAX_FIRST_NUMBER)
-    number_step = random.randint(MIN_STEP_NUMBER, MAX_STEP_NUMBER)
-    progression = generate_progression(number_first, number_step)
+    first_number = random.randint(MIN_FIRST_NUMBER, MAX_FIRST_NUMBER)
+    step = random.randint(MIN_STEP_NUMBER, MAX_STEP_NUMBER)
+    progression = generate_progression(first_number, step)
     hidden_index = random.randint(MIN_INDEX_NUMBER, len(progression) - 1)
     correct_answer = str(progression[hidden_index])
     progression[hidden_index] = '..'
     question = ' '.join(str(value) for value in progression)
-    return correct_answer, question
+    return question, correct_answer
 
 
-def generate_progression(number_first, number_step):
-    number_last = number_first + LENGTH_PROGRESSION * number_step
-    progression = list(range(number_first, number_last,
-                       number_step))
+def generate_progression(first_number, step):
+    last_number = first_number + LENGTH_PROGRESSION * step
+    progression = list(range(first_number, last_number,
+                       step))
     return progression

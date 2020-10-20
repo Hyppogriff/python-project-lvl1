@@ -10,11 +10,11 @@ def generate_question_and_answer():
     number_1 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     number_2 = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     question = "{} {}".format(number_1, number_2)
-    correct_answer = str(find_divisor(number_1, number_2))
-    return correct_answer, question
+    correct_answer = str(find_gcd(number_1, number_2))
+    return question, correct_answer
 
 
-def find_divisor(number_1, number_2):
+def find_gcd(number_1, number_2):
     while number_1 != number_2:
         if number_1 > number_2:
             number_1 = number_1 - number_2

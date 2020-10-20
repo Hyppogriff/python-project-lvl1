@@ -12,7 +12,7 @@ def generate_question_and_answer():
     if is_prime(number):
         correct_answer = 'yes'
     question = str(number)
-    return correct_answer, question
+    return question, correct_answer
 
 
 def is_prime(number):

@@ -14,7 +14,7 @@ def generate_question_and_answer():
     question = "{} {} {}".format(number_1, operation, number_2)
     correct_answer = str(calculate_operation_result(operation, number_1,
                                                     number_2))
-    return correct_answer, question
+    return question, correct_answer
 
 
 def calculate_operation_result(operation, number_1, number_2):
