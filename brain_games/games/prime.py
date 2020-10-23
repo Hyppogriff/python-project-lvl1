@@ -16,9 +16,11 @@ def generate_question_and_answer():
 
 
 def is_prime(number):
-    if number <= 1:
+    if number == 2 or number == 3:
+        return True
+    if number < 2 or number % 2 == 0:
         return False
-    for value in range(2, number - 1):
+    for value in range(3, int(number**0.5) + 1, 2):
         if number % value == 0:
             return False
     return True
