@@ -1,5 +1,5 @@
 import random
-
+import math
 
 TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 MIN_RANDOM_NUMBER = 2
@@ -16,11 +16,9 @@ def generate_question_and_answer():
 
 
 def is_prime(number):
-    if number == 2 or number == 3:
-        return True
     if number < 2 or number % 2 == 0:
         return False
-    for value in range(3, int(number**0.5) + 1, 2):
+    for value in range(3, int(math.sqrt(number)) + 1, 2):
         if number % value == 0:
             return False
     return True
